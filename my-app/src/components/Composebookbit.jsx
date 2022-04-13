@@ -37,7 +37,7 @@ function ComposeBook() {
 
     return(
         <div>
-            <h1>Compose a bookBit</h1>
+            <h1 id="bkbitheading">Compose a bookBit</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     {/* <label>Title */}
@@ -87,7 +87,8 @@ function ComposeBook() {
                         />
                     {/* </label> */}
                 </div>
-                <button type="submit" className="btn btn-dark btn-md" name="button">Insert</button>
+                <div id="insertbtn">
+                <button type="submit" className="btn btn-dark btn-md" name="button">Insert</button></div>
             </form>
         </div>
     )
