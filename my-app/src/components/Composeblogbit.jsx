@@ -37,7 +37,7 @@ function ComposeBlog() {
 
     return(
         <div>
-            <h1>Compose</h1>
+            <h1 id="blbitheading">Compose</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     {/* <label>Title */}
@@ -64,7 +64,8 @@ function ComposeBlog() {
                         />
                     {/* </label> */}
                 </div>
-                <button type="submit" className="btn btn-dark btn-md" name="button">Publish</button>
+                <div id="publishbtn">
+                <button type="submit" className="btn btn-dark btn-md" name="button">Publish</button></div>
             </form>
         </div>
     )
