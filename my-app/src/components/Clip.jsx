@@ -1,5 +1,5 @@
 import React from "react";
-import { Button,Form,FormControl } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -7,10 +7,10 @@ import { useNavigate } from "react-router";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import Navigation from "./Navigation";
-
-function Blog() {
+import ReactPlayer from "react-player";
+// import Video from 'react-native-video';
+function Clip() {
     const [state, setState] = useState([])
-    const [search,setSearch] = useState("")
     useEffect(() => {
             getData()
     }, [])
@@ -30,22 +30,7 @@ function Blog() {
     })
     }
 
-    function handleChange(e){
-        e.preventDefault();
-        let q=e.target.value;
-        setSearch(q);
-      }
-      function handleClick()
-      {
-        if(search!="")
-        {
-          navigate("/books/"+search)
-        }
-      }
-
-    const toPost=(element)=>{
-        navigate('/postblog',{state:{title: element.title, content: element.content}});
-    }
+    
 
     return(
         <div>
@@ -53,22 +38,11 @@ function Blog() {
                 <Card.Img src="/images/snipabitBlog.png" alt="Card image" />
                 <Card.ImgOverlay>
                 <Navigation></Navigation>
-                <Form className="d-flex">
-      <FormControl
-        type="search"
-        placeholder="Search"
-        className="me-2"
-        aria-label="Search"
-        value={search}
-        onChange={handleChange}
-      />
-      <Button variant="outline-success" onClick={handleClick}>Search</Button>
-    </Form>
                     <Card.Title className="blog-card-title">
-                        <h1>Snip long blogs & Articles</h1>
+                        <h1>Snip Long Videos to Clip</h1>
                     </Card.Title>
                     <Card.Text>
-                        <button id="blogbit-button" onClick={() => toCompose()}>Compose blogBit</button>
+                        <button id="blogbit-button" onClick={() => toCompose()}>Compose ClipBit</button>
                     </Card.Text>
                 </Card.ImgOverlay>
             </Card>
@@ -76,12 +50,13 @@ function Blog() {
             <Row xs={1} md={2} className="g-1">
             { state.map((element) =>(
                 <Col>
-                <div className="card text-white bg-dark mb-3 homepostouterdiv" key={element._id}>
-                    <img src="/images/Snipabit.jpg" className="card-img-top" alt="..."/>
+                <div className="card text-white bg-dark mb-3 homepostouterdiv" key={element._id} >
+                {/* <ReactPlayer url="https://youtu.be/HIj8wU_rGIU"  style={{width:"50%"}}/> */}
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Gb5SDIsSqro?start=92&end=123" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div className="card-body homepostcard">
                     <h1 className="card-title">{ element.title }</h1>
                     <p className="card-text">{ element.content.substring(0, 200) + "..." }</p>
-                    <a onClick={() => toPost(element)} className="btn btn-outline-light">Read More</a>
+                    
                     </div>
                 </div>
                 </Col>
@@ -91,4 +66,19 @@ function Blog() {
     )
 }
 
-export default Blog;
+export default Clip;
+
+// import React from 'react';
+// import ReactPlayer from "react-player";
+ 
+// function App() {
+//   return (
+//     <div className="App">
+    //   <ReactPlayer
+    //     url="https://www.youtube.com/watch?v=UVCP4bKy9Iw"
+    //   />
+//     </div>
+//   );
+// }
+ 
+// export default App;

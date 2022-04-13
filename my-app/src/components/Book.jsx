@@ -54,7 +54,7 @@ function Book() {
                     <div className="card-body homepostcard">
                     <h1 className="card-title">{ element.bookName }</h1>
                     <h4>{element.bitTitle}</h4>
-                    <p className="card-text">{ element.bitContent.substring(0, 200) + "..." }</p>
+                    <p className="card-text">{ typeof(element.bitContent) }</p>
                     <h4>{element.chapter}</h4>
                     <a onClick={() => toPost(element)} className="btn btn-outline-light">Read More</a>
                     </div>

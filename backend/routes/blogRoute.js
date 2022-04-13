@@ -15,4 +15,18 @@ router.get("/", async (req, res) => {
   }
 })
 
+router.get("/blog/:search", async (req, res) => {
+  const { search } = req.params
+  try {
+    Blogbit.find({category: search}, function (req, blog) {
+      console.log(res.json(blog));
+    })
+  } catch (e) {
+    res.status(500).send({
+      success: false,
+      error: e
+    });
+  }
+})
+
 module.exports = router;

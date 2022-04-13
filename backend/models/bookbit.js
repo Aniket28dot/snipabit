@@ -7,6 +7,9 @@ const bookSchema = new mongoose.Schema({
     bitTitle: {
         type: String
     },
+    genre: {
+        type: String
+    },
     bitContent: {
         type: String
     },

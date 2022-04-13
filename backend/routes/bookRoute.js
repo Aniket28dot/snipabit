@@ -15,4 +15,19 @@ router.get("/book", async (req, res) => {
   }
 })
 
+
+router.get("/book/:search", async (req, res) => {
+  const { search } = req.params
+  try {
+    Bookbit.find({genre: search}, function (req, book) {
+      res.json(book);
+    })
+  } catch (e) {
+    res.status(500).send({
+      success: false,
+      error: e
+    });
+  }
+})
+
 module.exports = router;

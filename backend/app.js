@@ -9,13 +9,14 @@ var Blogbit = require('./models/blogbit');
 var Bookbit = require('./models/bookbit');
 var Thread = require('./models/threads');
 var Snipod = require('./models/snipod');
-
+var Clipbit = require('./models/clipbit')
 //Connecting with database _____________________________________________________________________________________________
 var db = require('./db/index');
 //___________________________________________________________________________________________
 
 var blogRouter = require("./routes/blogRoute")
 var bookRouter = require("./routes/bookRoute")
+var clipRouter = require("./routes/clipRoute")
 var cors = require('cors');
 
 var app = express();
@@ -65,6 +66,7 @@ app.post('/composebookbit', async (req, res) => {
 
 app.use('/', blogRouter);
 app.use('/', bookRouter);
+app.use('/', clipRouter);
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
