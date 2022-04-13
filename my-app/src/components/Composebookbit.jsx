@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import BlackN from "./BlackN";
 
 function ComposeBook() {
 
@@ -37,6 +38,7 @@ function ComposeBook() {
 
     return(
         <div>
+            <BlackN></BlackN>
             <h1 id="bkbitheading">Compose a bookBit</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
