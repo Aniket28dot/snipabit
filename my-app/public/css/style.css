@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #homediv h1{
+        text-align: center;
+        font-size: 3rem;
+        color: rgb(5, 114, 188);
+        text-shadow: 2px 2px 1px black;
+        letter-spacing: 3px;
+    }
+
+    .home-blog{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-blog img{
+        width: 100vw;
+    }
+}
+
+.container{
+    max-width: 100%;
+    padding: 0px;
+}
+
+#homediv{
+    background: url("snipabit1.png") no-repeat center center / cover;
+    text-align: justify;
+    height: 100vh;
+}
+
+#homediv h1{
+    color: #2FA4FF;
+    letter-spacing: 4px;
+    line-height: 1.5;
+}
+
+.head1 {
+    font-size: 4rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.head2 {
+    font-size: 6rem;
+    font-family: 'Noto Serif', serif;
+}
+
+.head3 {
+    font-size: 4rem;
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Noto Serif', serif; */
+}
+
+.home-blog{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home-blog img{
+    width: 55vw;
+    height: 100vh;
+}
+
+.home-blog-heading{
+    font-family: 'Comfortaa', cursive;
+    color: #06113c;
+    text-shadow: 1px 1px 2px rgb(5, 114, 188);
+}
+
+.home-blog-heading h1{
+    margin: 10px;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+#blogbit-heading{
+    font-size: 4rem;
+    font-family: 'Fredoka One', cursive;
+    background-color: #2FA4FF;
+    color: #06113c;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+/*Blog route css*/
+.blog-card{
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+}
+
+.blog-card-title h1{
+    font-size: 3rem;
+    color: #2FA4FF;
+    letter-spacing: 10px;
+    line-height: 1.5;
+}
+
+#blogbit-button{
+    font-size: 3rem;
+    font-family: 'Fredoka One', cursive;
+    background-color: #2FA4FF;
+    color: #06113c;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.container-fluid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.navbar-nav li a{
+    color: white;
+    text-align: left;
+}
+
+.navbar-nav  li a:hover {
+    color: #ffff !important;
+}
+
+/* CSS for buttons */
+.btn{
+    margin: 10px;
+    margin-left: 0;
+}
+
+/* CSS for Footer */
+#foot {
+    background-color: #F7F7F7;
+    color: white;
+}
+
+footer{
+    padding: 0 30px;
+    background-color: #06113c;
+    letter-spacing: 3px;
+    line-height: 1.7;
+}
+
+footer p{
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 15%;
+    padding: 0 10%;
+    line-height: 2;
+}
+
+.carousel-caption h1{
+    font-family: 'Courgette', cursive;
+    font-size: 3rem;
+}
+
+.carousel-caption p{
+    font-family: 'Corinthia', cursive;
+    font-size: 2rem;
+}
+
+.postcard{
+    text-align: justify;
+    padding: 2% 3%;
+    box-shadow: 3px 3px 10px 0px black;
+    font-family: 'Arima Madurai', cursive;
+    font-weight: bold;
+    line-height: 2;
+    word-spacing: 2px;
+}
+
+.feedheading{
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 3rem;
+    /* transform: rotate(0deg);
+    padding: 0.2rem 1.2rem;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    margin: 2% auto; */
+    /* font-size: 1.5rem; */
+}
+
+.homepostouterdiv {
+    width: 80%;
+    margin: 2% auto;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.homepostouterdiv img{
+    margin: 0px;
+    border-radius: 0px;
+    border-radius: 10px;
+    width: auto;
+}
+
+.homepostcard{
+    text-align: justify;
+    padding: 2% 3%;
+    font-family: 'Arima Madurai', cursive;
+    font-weight: bold;
+    line-height: 2;
+    word-spacing: 2px;
+}
+
+.homepostcard a{
+    font-weight: bold;
+}
+
+.postcard h1, .homepostcard h1{
+    font-family: 'Concert One', cursive;
+    font-size: 3rem;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: black;
+}
+/* .subscribebtn:hover{
+    color: black;
+} */
