@@ -109,6 +109,13 @@
     padding: 10px 20px;
     margin: 10px 0;
 }
+
+.navbar-dark .blacknav{
+    color: black;
+}
+.navbar-dark .navbar-nav .blackLink{
+    color: black;
+}
 .card{
     background-color: #06113c;
 }
@@ -184,7 +191,7 @@ footer p{
 
 .card-img-top {
     width: 100%;
-    height: 15vw;
+    height: 12vw;
     object-fit: cover;
 }
 
