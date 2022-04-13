@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-
+// import Navigation from "./Navigation";
+import BlackN from "./BlackN";
 function ComposeBlog() {
 
     const [inputs, setInputs] = useState({});
@@ -37,6 +38,7 @@ function ComposeBlog() {
 
     return(
         <div>
+           <BlackN></BlackN>
             <h1 id="blbitheading">Compose</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
