@@ -49,7 +49,7 @@ function Book() {
             <Row xs={1} md={2} className="g-4">
             { state.map((element) =>(
                 <Col>
-                <div className="card text-white bg-dark mb-3 homepostouterdiv" key={element._id}>
+                <div className="card text-white mb-3 homepostouterdiv" key={element._id}>
                     <img src="/images/Snipabit.jpg" className="card-img-top" alt="..."/>
                     <div className="card-body homepostcard">
                     <h1 className="card-title">{ element.bookName }</h1>
